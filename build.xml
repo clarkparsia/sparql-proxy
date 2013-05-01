@@ -5,7 +5,7 @@
 
 <project name="sparql-proxy" default="dist" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
     <description>
-        Clark &amp; Parsia url2sparql Module 
+        Clark &amp; Parsia Sparql-Proxy Servlet
     </description>
 
     <!-- Global Properties -->
@@ -16,7 +16,7 @@
     <property name="lib" value="lib"/>
 
     <property name="project.name" value="sparql-proxy" />
-    <property name="project.version" value="0.1" />
+    <property name="project.version" value="0.0.1" />
 	<property name="web" value="web"/>
     <property name="war" value="${dist}/${project.name}.war"/>
     <property name="jar.prefix" value="sparql-proxy" />
