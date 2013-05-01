@@ -1,0 +1,47 @@
+<web-app>
+  <class-loader>
+		<tree-loader path="WEB-INF/lib"/>
+  </class-loader>
+
+	<servlet>
+    <servlet-name>SparqlServletProxy</servlet-name>
+    <servlet-class>com.clarkparsia.sparql.SparqlEndpointProxy</servlet-class>
+
+		<init-param>
+			<param-name>proxy.host</param-name>
+			<param-value>http://localhost:5822</param-value>
+		</init-param>
+	</servlet>
+
+
+  <servlet-mapping>
+    <url-pattern>/*</url-pattern>
+    <servlet-name>SparqlServletProxy</servlet-name>
+  </servlet-mapping>
+
+	<!-- CORS filter handling Cross-Origin Domain requests -->
+	<filter>
+		<filter-name>CORS</filter-name>
+		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+
+		<init-param>
+			<param-name>cors.supportedMethods</param-name>
+			<param-value>GET, POST, HEAD, PUT, DELETE, OPTIONS</param-value>
+		</init-param>
+
+		<init-param>
+      		<param-name>code.allowSubdomains</param-name>
+      		<param-value>true</param-value>
+		</init-param>
+
+		<init-param>
+      		<param-name>cors.supportedHeaders</param-name>
+      		<param-value>origin, content-type, accept</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CORS</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
