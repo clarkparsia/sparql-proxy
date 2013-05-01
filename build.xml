@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright (c) 2005 - 2012, Clark & Parsia, LLC. <http://www.clarkparsia.com>
+  ~ Copyright (c) 2005 - 2013, Clark & Parsia, LLC. <http://www.clarkparsia.com>
   -->
 
 <project name="sparql-proxy" default="dist" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">

@@ -1,3 +1,5 @@
+// Copyright (c) 2010 - 2013 -- Clark & Parsia, LLC. <http://www.clarkparsia.com>
+
 package com.clarkparsia.sparql;
 
 import java.io.IOException;
